@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app = "angularApp">
+  <head>
+    <meta charset="utf-8">
+    <title>angular assessment</title>
+    <script src = "angular.min.js"></script>
+    <script src = "client.js"></script>
+
+  </head>
+  <body ng-controller = "AngularController as controller">
+
+    <input type = "text" ng-model = "controller.message" />
+
+    <button ng-click = "controller.buttonClicked()">Button</button>
+
+
+
+  <div ng-show = "controller.showMessage">
+    Message is: {{controller.initialMessage}}
+  </div>
+
+  <div ng-show = "controller.showPrevious">
+    <p>Previous Messages:</p>
+    <ul>
+      <li ng-repeat = "item in controller.previousMessages">{{item}}</li>
+    </ul>
+  </div>
+
+  </body>
+</html>
