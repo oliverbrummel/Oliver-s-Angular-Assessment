@@ -8,9 +8,9 @@ app.controller('AngularController', ['$http', function($http){
  vm.previousMessages = [];
 
  vm.buttonClicked = function(){
-   vm.showMessage = true;
-   console.log(vm.initialMessage);
    clicks ++;
+   vm.showMessage = true;
+  //  console.log(vm.initialMessage);
    vm.previousMessages.push(vm.initialMessage);
    vm.initialMessage = vm.message;
 
